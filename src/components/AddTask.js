@@ -1,8 +1,21 @@
 
 const AddTask = () => {
     return (
-        <form>
-            <h1>hi</h1>
+        <form className='add-form'>
+            <div className='form-control'>
+                <label htmlFor="">Task</label>
+                <input type="text" placeholder='Add Task'/>
+            </div>
+            <div className='form-control'>
+                <label htmlFor="">Day & Time</label>
+                <input type="text" placeholder='Date & Time'/>
+            </div>
+            <div className='form-control form-control-check'>
+                <label htmlFor="">Reminder</label>
+                <input type="checkbox"/>
+            </div>
+
+            <input type="submit" value='Save Task' className='btn btn-block'/>
         </form>
     )
 }

@@ -3,7 +3,8 @@ import React, {useState} from 'react';
 
 import Header from './components/Header'
 import Tasks from './components/Tasks'
-//import Navbar from './components/Navbar';
+import Navbar from './components/AddTask';
+import AddTask from './components/AddTask';
 
 
 
@@ -64,7 +65,7 @@ const toggleReminder = (id) => {
   return (
     <div className="container">
       <Header title='Task Tracker'/>
-
+      <AddTask/>
       {/* passing the deleteTask func down to tasks as a prop (omDelete) where the task item actually exists*/}
       { tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : 'No task to show'}
     </div>
